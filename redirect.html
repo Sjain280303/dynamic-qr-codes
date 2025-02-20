@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");  
+        const redirects = {
+            "google": "https://www.google.com",
+            "github": "https://github.com",
+            "youtube": "https://youtube.com"
+        };
+        if (id && redirects[id]) {
+            window.location.href = redirects[id];
+        } else {
+            document.write("<h1>Invalid QR Code</h1>");
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
